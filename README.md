@@ -99,8 +99,8 @@ The system processes raw, unstructured text and returns a structured, evaluated 
 
 ## 📂 Project Structure
 
-- `/src/module_a/llm_processor.py` — The core AI agent that interacts with Gemini.
-- `/src/module_a/service.py` — The orchestration layer connecting the LLM to the database.
+- `/src/core/llm_processor.py` — The core AI agent that interacts with Gemini.
+- `/src/core/service.py` — The orchestration layer connecting the LLM to the database.
 - `/src/db/` — SQLite database initialization and schemas.
 - `/src/api/server.py` — The FastAPI REST endpoints.
 - `/frontend/` — The React dashboard application.

@@ -1,7 +1,7 @@
 import pytest
 from pydantic import ValidationError
-from src.module_a.models import MaintenanceLog
-from src.module_a.service import MaintenanceService
+from src.core.models import MaintenanceLog
+from src.core.service import MaintenanceService
 
 def test_maintenance_log_valid_creation():
     log = MaintenanceLog(
@@ -22,7 +22,7 @@ def test_maintenance_log_invalid_category():
 
 def test_service_validation_fallback(mocker):
     # Mock analyzer initialization to avoid API key requirements
-    mocker.patch('src.module_a.service.ComplaintAnalyzer')
+    mocker.patch('src.core.service.ComplaintAnalyzer')
     
     # Service validation repairs invalid values to Unknown/Medium
     service = MaintenanceService()
@@ -41,7 +41,7 @@ def test_service_validation_fallback(mocker):
     assert repaired_log.original_complaint == "Broken"
 
 def test_service_validation_valid(mocker):
-    mocker.patch('src.module_a.service.ComplaintAnalyzer')
+    mocker.patch('src.core.service.ComplaintAnalyzer')
     service = MaintenanceService()
     valid_log = MaintenanceLog(
         issue_category="Mechanical",
@@ -54,7 +54,7 @@ def test_service_validation_valid(mocker):
     assert checked_log.priority == "Low"
 
 def test_process_and_store_complaint_mocked(mocker):
-    mocker.patch('src.module_a.service.ComplaintAnalyzer')
+    mocker.patch('src.core.service.ComplaintAnalyzer')
     service = MaintenanceService()
     
     # Mock LLM analyzer's analyze method

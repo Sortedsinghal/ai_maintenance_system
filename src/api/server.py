@@ -16,7 +16,7 @@ load_dotenv()
 # Ensure project root is on path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", ".."))
 
-from src.module_a.service import MaintenanceService
+from src.core.service import MaintenanceService
 from src.db.init_db import DB_PATH, init_db
 
 logger = logging.getLogger(__name__)

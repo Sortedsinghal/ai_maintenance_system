@@ -4,7 +4,7 @@ import os
 from contextlib import contextmanager
 from typing import Optional
 
-from src.module_a.models import MaintenanceLog
+from src.core.models import MaintenanceLog
 from src.db.init_db import DB_PATH
 
 logger = logging.getLogger(__name__)

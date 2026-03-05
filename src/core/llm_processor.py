@@ -6,7 +6,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from pydantic import ValidationError
 from google.api_core.exceptions import GoogleAPIError
 
-from src.module_a.models import MaintenanceLog
+from src.core.models import MaintenanceLog
 
 logger = logging.getLogger(__name__)
 

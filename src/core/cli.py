@@ -5,7 +5,7 @@ from rich.panel import Panel
 from rich.prompt import Prompt
 from dotenv import load_dotenv
 
-from src.module_a.service import MaintenanceService
+from src.core.service import MaintenanceService
 
 load_dotenv()
 console = Console()

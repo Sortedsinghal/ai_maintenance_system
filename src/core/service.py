@@ -1,7 +1,7 @@
 import logging
-from src.module_a.models import MaintenanceLog
-from src.module_a.llm_processor import ComplaintAnalyzer
-from src.module_a.db_layer import MaintenanceDatabase
+from src.core.models import MaintenanceLog
+from src.core.llm_processor import ComplaintAnalyzer
+from src.core.db_layer import MaintenanceDatabase
 
 logger = logging.getLogger(__name__)
 
