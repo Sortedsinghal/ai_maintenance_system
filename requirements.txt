@@ -1,0 +1,15 @@
+pydantic>=2.0.0
+langchain>=0.2.0
+langchain-core>=0.2.0
+langchain-google-genai
+langchain-huggingface
+langchain-chroma
+chromadb
+sentence-transformers
+python-dotenv
+rich
+tenacity
+pytest
+pytest-mock
+fastapi
+uvicorn[standard]
